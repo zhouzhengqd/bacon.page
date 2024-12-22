@@ -2,9 +2,9 @@
 <img src="resources/logo.png" width="100%" class="center" alt="pipeline"/>
 </p>
 
-Website of BEARD: Benchmarking the Adversarial Robustness for Dataset Distillation
+Page of BEARD: Benchmarking the Adversarial Robustness for Dataset Distillation
 
-**Website**: [https://zhouzhengqd.github.io/bacon.page/](https://zhouzhengqd.github.io/bacon.page/).
+**Page**: [https://zhouzhengqd.github.io/bacon.page/](https://zhouzhengqd.github.io/bacon.page/).
 
 **Code**: [https://github.com/zhouzhengqd/BACON.git](https://github.com/zhouzhengqd/BACON.git).
 
