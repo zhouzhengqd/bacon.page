@@ -1,11 +1,17 @@
-## <b>Webpage template</b>
+<p align="center">
+<img src="resources/logo.png" width="100%" class="center" alt="pipeline"/>
+</p>
 
-This webpage template was made for a [colorful ECCV paper](http://richzhang.github.io/colorization/). See how the webpage looks [here](https://richzhang.github.io/webpage-template).
+Website of BEARD: Benchmarking the Adversarial Robustness for Dataset Distillation
 
-To use this template, clone the repo:
+**Website**: [https://zhouzhengqd.github.io/bacon.website/](https://zhouzhengqd.github.io/bacon.website/).
 
-```
-git clone https://github.com/richzhang/webpage-template.git
-```
+**Code**: [https://github.com/zhouzhengqd/BACON.git](https://github.com/zhouzhengqd/BACON.git).
 
-Copy the contents into a `gh-pages` branch of a GitHub repo. That will automatically make a webpage under address [GITHUB_USERNAME.github.io/REPO_NAME](GITHUB_USERNAME.github.io/REPO_NAME).
+**Paper:** [https://arxiv.org/pdf/2406.01112](https://arxiv.org/pdf/2406.01112).
+
+
+
+## Abstract
+
+> **Abstract** Dataset Distillation (DD) reduces dataset size while maintaining test set performance, helping to cut storage and training costs. Current DD methods struggle with large datasets and lack a solid theoretical foundation. To address this, we introduce the <u>**BA**</u>yesian Optimal <u>**CON**</u>densation Framework (<u>**BACON**</u>), the first Bayesian approach to DD. BACON formulates DD as a minimization problem in Bayesian joint distributions and derives a numerically feasible lower bound. Our experiments show that BACON outperforms state-of-the-art methods, with significant accuracy improvements on CIFAR-10 and TinyImageNet. BACON seamlessly integrates with existing systems and boosts DD performance. Code and distilled datasets are available at [BACON](https://github.com/zhouzhengqd/BACON).
