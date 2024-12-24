@@ -54,8 +54,11 @@
 		text-decoration: none;
 	}
 	a:hover {
-		color: #208799;
-	}
+    background-color: #d1e7ff; /* 背景色变化 */
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
 	
 	td.dl-link {
 		height: 160px;
@@ -114,12 +117,33 @@
 		height: 1px;
 		background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 	}
+	/* 将所有 h2 标签的字体设置为斜体，去掉粗体，并减小标题大小 */
+	h2 {
+		font-style: italic; /* 设置斜体 */
+		font-weight: normal; /* 取消加粗 */
+		font-size: 1.2em; /* 减小标题的字体大小 */
+	}
+
+	/* 对数学公式进行进一步调整 */
+	p {
+		font-family: 'Times New Roman', serif; /* 使用经典的 serif 字体，增加数学美感 */
+		font-size: 0.9em; /* 减小叙述性文字的大小 */
+	}
+
+	/* 给数学公式应用更好的排版 */
+	.math {
+		font-style: italic; /* 斜体 */
+		font-size: 1.1em; /* 稍微增大字体，使得公式更加醒目 */
+	}
+
+
 </style>
 
 <html>
 <head>
-	<title>This is my paper title</title>
-	<meta property="og:image" content="Path to my teaser.png"/> <!-- Facebook automatically scrapes this. Go to https://developers.facebook.com/tools/debug/ if you update and want to force Facebook to rescrape. -->
+	<title>BACON: Bayesian Optimal Condensation Framework for Dataset Distillation</title>
+	<link rel="icon" href="resources/bacon.png" type="image/x-icon">
+	<meta property="og:image" content="resources/bacon.png"/> <!-- Facebook automatically scrapes this. Go to https://developers.facebook.com/tools/debug/ if you update and want to force Facebook to rescrape. -->
 	<meta property="og:title" content="BACON: Bayesian Optimal Condensation Framework for Dataset Distillation." />
 	<meta property="og:description" content="Paper description." />
 
@@ -138,7 +162,52 @@
 <hr>
 	<br>
 	<center>
-		<td><img class="round" style="width:800px" src="./resources/logo.png"/></td>
+		<div style="text-align: center; margin-bottom: 10px;">
+			<!-- 图片部分，确保居中 -->
+			<img class="round" style="width: 180px; display: block; margin: 0 auto 5px auto;" src="./resources/bacon.png" alt="BACON Logo" />
+			
+			<!-- 标题部分 -->
+			<span style="font-size: 36px; font-weight: bold; line-height: 1.2;">
+				<span style="font-size: 36px; font-weight: bold; position: relative; color: transparent; display: inline-block; background-color: black; -webkit-background-clip: text; background-image: url('./resources/fire-flames.gif'); background-size: 100% 100%; animation: flameEffect 0.5s infinite linear;">B</span>
+				<span style="font-size: 36px; font-weight: bold; position: relative; color: transparent; display: inline-block; background-color: black; -webkit-background-clip: text; background-image: url('./resources/fire-flames.gif'); background-size: 100% 100%; animation: flameEffect 0.5s infinite linear;">A</span>
+				<span style="font-size: 36px; font-weight: bold; position: relative; color: transparent; display: inline-block; background-color: black; -webkit-background-clip: text; background-image: url('./resources/fire-flames.gif'); background-size: 100% 100%; animation: flameEffect 0.5s infinite linear;">C</span>
+				<span style="font-size: 36px; font-weight: bold; position: relative; color: transparent; display: inline-block; background-color: black; -webkit-background-clip: text; background-image: url('./resources/fire-flames.gif'); background-size: 100% 100%; animation: flameEffect 0.5s infinite linear;">O</span>
+				<span style="font-size: 36px; font-weight: bold; position: relative; color: transparent; display: inline-block; background-color: black; -webkit-background-clip: text; background-image: url('./resources/fire-flames.gif'); background-size: 100% 100%; animation: flameEffect 0.5s infinite linear;">N</span>
+		
+				<!-- 其他文字部分 -->
+				<span style="font-size: 36px; font-weight: normal; color: #333;">
+					: Bayesian Optimal Condensation Framework for Dataset Distillation
+				</span>
+			</span>
+		</div>
+		
+		
+		<!-- 动画效果 -->
+		<style>
+			@keyframes flameEffect {
+				0% {
+					background-position: 0% 0%;
+				}
+				50% {
+					background-position: 100% 100%;
+				}
+				100% {
+					background-position: 0% 0%;
+				}
+			}
+		</style>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		<table align=center width=600px>
 			<table align="center" width="100%" style="border-collapse: collapse;">
 				<!-- 第一行作者 -->
@@ -178,19 +247,34 @@
 			</table>
 			<!-- 脚注 -->
 			<p style="font-size: 18px; text-align: center;">* Corresponding Author</p>
-			<table align="center" width="50%" style="border-collapse: collapse;">
+			<table align="center" width="70%" style="border-collapse: separate; margin-top: 20px; border-spacing: 10px;">
 				<tr>
-					<td style="text-align: center; width: 20%; padding: 10px;">
-						<span style="font-size:20px"><a href='https://arxiv.org/pdf/2406.01112'>[Paper]</a></span>
+					<td style="text-align: center; width: 33%; padding: 15px; background-color: #f0f8ff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+						<a href='https://arxiv.org/pdf/2406.01112' style="text-decoration: none; color: #000; display: flex; justify-content: center; align-items: center; transition: all 0.3s ease;">
+							<img src="https://img.icons8.com/ios/50/000000/paper-plane.png" alt="Paper Icon" style="width: 30px; margin-right: 8px;">
+							<span style="font-size: 18px; font-weight: bold;">[Paper]</span>
+						</a>
 					</td>
-					<td style="text-align: center; width: 20%; padding: 10px;">
-						<span style="font-size:20px"><a href='https://github.com/zhouzhengqd/BACON.git'>[GitHub]</a></span>
+					<td style="text-align: center; width: 33%; padding: 15px; background-color: #e0f7fa; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+						<a href='https://github.com/zhouzhengqd/BACON.git' style="text-decoration: none; color: #000; display: flex; justify-content: center; align-items: center; transition: all 0.3s ease;">
+							<img src="https://img.icons8.com/ios/50/000000/github.png" alt="GitHub Icon" style="width: 30px; margin-right: 8px;">
+							<span style="font-size: 18px; font-weight: bold;">[GitHub]</span>
+						</a>
 					</td>
-					<td style="text-align: center; width: 20%; padding: 10px;">
-						<span style="font-size:20px"><a href='https://share.multcloud.link/share/f496af96-494a-4815-a7c9-e93cd95ecdd1'>[Distilled Dataset]</a></span>
+					<td style="text-align: center; width: 34%; padding: 15px; background-color: #fff3e6; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+						<a href='https://share.multcloud.link/share/f496af96-494a-4815-a7c9-e93cd95ecdd1' style="text-decoration: none; color: #000; display: flex; justify-content: center; align-items: center; transition: all 0.3s ease;">
+							<img src="https://img.icons8.com/ios/50/000000/download.png" alt="Download Icon" style="width: 30px; margin-right: 8px;">
+							<span style="font-size: 18px; font-weight: bold;">[Distilled Dataset]</span>
+						</a>
 					</td>
 				</tr>
 			</table>
+			
+			
+			
+			
+			
+			
 			
 		</table>
 	</center>
@@ -226,19 +310,7 @@
 	
 	<hr>
 	
-	<center><h1>Motivation</h1></center>
-
-	<p>
-		<strong>Dataset Distillation (DD)</strong> aims to reduce dataset size while maintaining test set performance, but existing methods struggle with large datasets and lack a solid theoretical foundation. Current approaches are computationally intensive and often perform poorly on complex tasks, particularly with large-scale datasets.
-	</p>
-	<ul>
-		<li><i>How can we effectively formulate the DD problem?</i></li>
-		<li><i>What is the theoretical lower bound of optimal condensation?</i></li>
-	  </ul>
-	
-	<p>
-		To address these challenges, we introduce the <strong>Bayesian Optimal Condensation Framework (BACON)</strong>. This is the first Bayesian approach to DD, providing a clear theoretical foundation and a numerically feasible solution. BACON formulates DD as a minimization problem within Bayesian joint distributions, significantly improving performance, especially on large datasets like CIFAR-10 and TinyImageNet.
-	</p>
+	<center><h1>Background, Motivation, and Contribution</h1></center> <p> <strong>Dataset Distillation (DD)</strong> aims to reduce dataset size while maintaining model performance. However, existing methods struggle with large datasets and lack a strong theoretical foundation, as shown in <strong>Figure 1(a)</strong>. Current approaches are computationally expensive and often underperform on complex tasks, particularly with large-scale datasets. </p> <ul> <li><i>How can we effectively formulate the DD problem?</i></li> <li><i>What is the theoretical lower bound for optimal condensation?</i></li> </ul> <p> To overcome these challenges, we introduce the <strong>Bayesian Optimal Condensation Framework (BACON)</strong>, the first Bayesian approach to DD. BACON provides both a solid theoretical foundation and a numerically feasible solution. By framing DD as a minimization problem within Bayesian joint distributions, BACON significantly improves performance, particularly on large datasets like CIFAR-10 and TinyImageNet, as illustrated in <strong>Figure 1(b)</strong>. </p>
 	Key Benefits of BACON:
 	<ul>
 		<li><i><strong>Strong Theoretical Foundation:</strong> Leveraging Bayesian optimization to guide the DD process.</i></li>
@@ -246,24 +318,8 @@
 		<li><i><strong>Scalability:</strong> Efficiently handles large datasets and integrates seamlessly with existing systems.</i></li>
 	  </ul>
 	<hr>
-	<center><h1>Bayesian Optimal Condensation Framework</h1></center>
-	<tr>
-		<td width="260px">
-			<center>
-				<figure>
-					<img class="round" style="width:800px" src="./resources/method.png"/>
-					<figcaption style="font-size: 16px; text-align: left; color: #555;">
-						<strong>Figure 2:</strong> Illustration of BACON: The neural network outputs a distribution from both synthetic and real datasets. BACON formulates this distribution as a Bayesian optimal condensation risk function and derives its optimal solution using Bayesian principles. 
-					</figcaption>
-				</figure>
-			</center>
-		</td>
-	</tr>
-	  <p>As illustrated in Figure 2, BACON uses a joint probability model, based on Bayesian theory, to optimize dataset distillation tasks. The framework calculates the optimal synthetic dataset by deriving a condensation risk function and applies approximation techniques for efficient solution computation.</p>
-	  <ul>
-		<li><i>Optimal Condensation Risk Function: A derived expected risk function optimizes dataset representation, ensuring the synthetic dataset retains key features of the original.</i></li>
-		<li><i>Approximation Methods: Uses Monte Carlo sampling and other methods to efficiently approximate the optimal solution.</i></li>
-	  </ul>
+	<center><h1>Bayesian Optimal Condensation Framework</h1></center> <tr> <td width="260px"> <center> <figure> <img class="round" style="width:800px" src="./resources/method.png"/> <figcaption style="font-size: 16px; text-align: left; color: #555;"> <strong>Figure 2:</strong> Illustration of BACON: The neural network outputs a distribution from both synthetic and real datasets. BACON formulates this distribution as a Bayesian optimal condensation risk function and derives its optimal solution using Bayesian principles. </figcaption> </figure> </center> </td> </tr> <p>As shown in <strong>Figure 2</strong>, BACON uses a Bayesian-based joint probability model to optimize dataset distillation. It derives a condensation risk function to compute the optimal synthetic dataset and applies approximation methods for efficient solution. The Bayesian optimal condensation risk function is defined in <a href="#theorem3.4">Theorem 3.4</a>, and the risk function’s theoretical lower bound is established in <a href="#theorem3.6">Theorem 3.6</a>. Assumptions on <a href="#assumption1">log-likelihood</a> and <a href="#assumption2">prior distribution</a> are introduced to approximate solutions and define the training strategy. BACON represents the first theoretical analysis of optimal condensation via Bayesian principles, providing a strong foundation for improved distillation performance.</p>
+		
 	  <head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -273,102 +329,33 @@
 		</script>
 	</head>
 	<body>
-		<h1>Theorem: Bayesian Optimal Condensation Risk Function</h1>
-	
-		<p>The optimal embedding feature of synthetic image $z_{\tilde{x}}^*$ can be computed as follows </p>
-	
-		<p>
+		<h2 id="theorem3.4">Theorem 3.4: The expected risk function in a joint probability distribution can also be calculated as follows:</h2>
+		<p class="math">
 			\[
-			z_{\tilde{x}}^* = argmax_{z_{\tilde{x}} \in \mathcal{D}_S} \int_{\mathcal{B}(z_{\tilde{x}}, \epsilon)} \left[\log p(z_{\tilde{x}} | z_x) + \log p(z_x)\right] dz_x.
+			R(\phi_\theta) = 1- \mathbb{E}_{z_{\tilde{x}} \sim p(z_{\tilde{x}})}\left[\int_{\mathcal{B}(z_{\tilde{x}},\epsilon)}p(z_x| z_{\tilde{x}})dz_x\right].
 			\]
 		</p>
 	
-		<p><strong>Proof:</strong> By leveraging Bayes' rule and Jensen's inequality, we derive the function as follows:</p>
+		<h2 id="theorem3.6">Theorem 3.6: The optimal embedding feature of synthetic image can be computed as follows:</h2>
+		<p class="math">
+			\[
+			z_{\tilde{x}}^* = \arg\max_{z_{\tilde{x}} \in \mathcal{D}_S} \int_{\mathcal{B}(z_{\tilde{x}}, \epsilon)} \left[\log p(z_{\tilde{x}} | z_x) + \log p(z_x)\right] dz_x.
+			\]
+		</p>
 	
-		<p>
-			\[
-			z_{\tilde{x}}^* = argmax_{z_{\tilde{x}} \in \mathcal{D}_S} \int_{\mathcal{B}(z_{\tilde{x}}, \epsilon)} p(z_x | z_{\tilde{x}}) dz_x
-			\]
-		</p>
-		<p>
-			\[
-			= argmax_{z_{\tilde{x}} \in \mathcal{D}_S} \int_{\mathcal{B}(z_{\tilde{x}}, \epsilon)} \frac{p(z_{\tilde{x}} | z_x) p(z_x)}{p(z_{\tilde{x}})} dz_x
-			\]
-		</p>
-		<p>
-			\[
-			= argmax_{z_{\tilde{x}} \in \mathcal{D}_S} \int_{\mathcal{B}(z_{\tilde{x}}, \epsilon)} \underbrace{p(z_{\tilde{x}} | z_x) p(z_x)}_{\text{Bayesian formula}} dz_x
-			\]
-		</p>
-		<p>
-			\[
-			= argmax_{z_{\tilde{x}} \in \mathcal{D}_S} \left[ \log \int_{\mathcal{B}(z_{\tilde{x}}, \epsilon)} p(z_{\tilde{x}} | z_x) p(z_x) dz_x \right]
-			\]
-		</p>
-		<p>
-			\[
-			\geq argmax_{z_{\tilde{x}} \in \mathcal{D}_S} \int_{\mathcal{B}(z_{\tilde{x}}, \epsilon)} \log \left[ p(z_{\tilde{x}} | z_x) p(z_x) \right] dz_x
-			\quad \text{(by Jensen's inequality)}
-			\]
-		</p>
-		<p>
-			\[
-			= argmax_{z_{\tilde{x}} \in \mathcal{D}_S} \int_{\mathcal{B}(z_{\tilde{x}}, \epsilon)} \left[\log p(z_{\tilde{x}} | z_x) + \log p(z_x)\right] dz_x
-			\]
-		</p>
-		<h1>Assumptions and Loss Function</h1>
-	
-		<h2>Assumption 1: Likelihood Conforming Gaussian</h2>
+		<h2 id="assumption1">Assumption 1: Likelihood Conforming Gaussian</h2>
 		<p>
 			To estimate the log-likelihood \( \log p(z_{\tilde{x}} | z_{x_i}) \), we make the assumption that \( p(z_{\tilde{x}} | z_{x_i}) \) conforms to a Gaussian distribution. In this distribution, \( \sigma_x^2 \) represents the variance and \( z_{x_i} \) represents the mean. It is denoted as:
 		</p>
-		<p>
+		<p class="math">
 			\[
 			p(z_{\tilde{x}} | z_{x_i}) \sim \mathcal{N}(z_{x_i}, \sigma_{xi}^2 I)
 			\]
 		</p>
 	
-		<h2>Assumption 2: Prior Distribution Approximation with TV Extension</h2>
+		<h2 id="assumption2">Assumption 2: Prior Distribution Approximation with TV Extension</h2>
 		<p>
 			The Total Variation (TV) and CLIP operation are incorporated as distribution priors to represent \( \log p(z_{x_i}) \). The CLIP operation constrains the probability within the bound of \( [0,1] \). In contrast to their study, we extend the TV from a pixel-wise approach to a distribution-wise approach, which is also referred to as the total variation of probability distribution measures.
-		</p>
-	
-		<h2>Loss Functions</h2>
-		<p>
-			Under Assumption 1 and Assumption 2, we mitigate computational costs by using mini-batch sampling instead of Monte Carlo methods. Mini-batch sampling, which divides the dataset into smaller subsets, is more convenient for training and reduces computational overhead, whereas Monte Carlo methods require more extensive computational resources. Consequently, we divide the following equation into three separate loss terms:
-		</p>
-	
-		<p>
-			\[
-			\mathcal{L}_{\text{LH}} = -\frac{1}{k}\sum_{i=1}^{k}\left[\frac{1}{2}\log(2 \pi \sigma_{x_i}) +\frac{1}{2\sigma_{x_i}^2}\Vert z_{\tilde{x}}- z_{x_i}\Vert_2^2\right]
-			\]
-		</p>
-	
-		<p>
-			\[
-			\mathcal{L}_{\text{TV}} = \frac{1}{k}\sum_{i=1}^{k}\left(\frac{1}{2} \Vert z_{\tilde{x}} - z_{x_i}\Vert_1\right)
-			\]
-		</p>
-	
-		<p>
-			\[
-			\mathcal{L}_{\text{CLIP}} =  \frac{1}{k}\sum_{i=1}^{k}\left[\frac{z_{\tilde{x}} - z_{x_i}}{\sigma_{x_i}} - \text{CLIP}\left(\frac{z_{\tilde{x}} - z_{x_i}}{\sigma_{x_i}}, 0, 1\right)\right]^2
-			\]
-		</p>
-	
-		<h3>Overall Loss Function</h3>
-		<p>
-			To summarize, the overall loss function of BACON integrates the three loss terms above. The combined loss function is defined as:
-		</p>
-	
-		<p>
-			\[
-			\mathcal{L}_{\text{TOTAL}} = \mathcal{L}_{\text{LH}} + \lambda \mathcal{L}_{\text{TV}} + (1-\lambda)\mathcal{L}_{\text{CLIP}}
-			\]
-		</p>
-	
-		<p>
-			where the hyperparameter \( \lambda \) serves as the weighting factor for the total loss function and is adjustable. By tuning \( \lambda \), we can customize the loss function to optimize performance.
 		</p>
 	</body>
 
@@ -453,14 +440,13 @@
 
 	<hr>
 	<br>
-
 	<div style="text-align: center; width: 900px; margin: 0 auto;">
 		<h1>Acknowledgements</h1>
-		<p>We gratefully acknowledge the contributors of DC-bench and IDM, as our code builds upon their work. 
-			You can find their repositories here: 
+		<p>We gratefully acknowledge the contributions of the DC-bench and IDM teams, as our code builds upon their work. You can find their repositories here: 
 			<a href="https://github.com/justincui03/dc_benchmark?tab=readme-ov-file" target="_blank">DC-bench</a> and 
 			<a href="https://github.com/uitrbn/IDM" target="_blank">IDM</a>.
 		</p>
+		<p>This template was originally created by <a href="http://web.mit.edu/phillipi/">Phillip Isola</a> and <a href="http://richzhang.github.io/">Richard Zhang</a> for their <a href="http://richzhang.github.io/colorization/">colorful</a> ECCV project. The code can be found <a href="https://github.com/richzhang/webpage-template" target="_blank">here</a>.</p>
 	</div>
 	
 
