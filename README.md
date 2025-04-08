@@ -2,7 +2,7 @@
 <img src="resources/logo.png" width="100%" class="center" alt="pipeline"/>
 </p>
 
-Page of BEARD: Benchmarking the Adversarial Robustness for Dataset Distillation
+Page of BACON: Bayesian Optimal Condensation Framework for Dataset Distillation
 
 **Page**: [https://zhouzhengqd.github.io/bacon.page/](https://zhouzhengqd.github.io/bacon.page/).
 
