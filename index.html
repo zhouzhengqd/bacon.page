@@ -299,8 +299,9 @@
 		<tr>
 			<td>
 				<p style="background-color: #f0f0f0; padding: 15px;">
-					<strong>Abstract:</strong> Dataset Distillation (DD) aims to condense large datasets into compact synthetic sets that preserve performance on unseen data, thereby reducing storage and training costs. However, most existing methods emphasize empirical performance without solid theoretical grounding, leaving issues such as optimization inefficiency and the lack of theoretical guarantees against suboptimal solutions unresolved. To bridge this gap, we propose the <u><strong>BA</strong></u>yesian optimal <u><strong>CON</strong></u>densation framework (<u><strong>BACON</strong></u>), the first to incorporate a Bayesian perspective into dataset distillation. BACON offers a principled probabilistic formulation by casting DD as a Bayesian optimization problem, addressing the lack of Bayesian theoretical analysis in prior methods. To characterize the theoretical limit of DD, we derive a numerically tractable lower bound on the expected risk over the joint distribution of latent variables. Under mild assumptions, we obtain an approximate solution for data synthesis, where incorporating prior knowledge improves optimization efficiency through guiding posterior estimation. We evaluate BACON against 18 state-of-the-art methods on four standard image classification datasets under various images-per-class (IPC) settings, where it consistently demonstrates superior performance. For example, under the IPC-10 setting on CIFAR-10, BACON achieves the largest accuracy gain of 17.16\% among all methods, outperforming the second-best approach, IDM, by 3.46\%, while also reducing both synthesis and training costs. These results underscore the theoretical soundness and practical effectiveness of BACON for dataset distillation. Code and distilled datasets are available at <a href="https://github.com/zhouzhengqd/BACON" 
-					target="_blank"><u><strong>BACON</strong></u></a>.
+					<strong>Abstract:</strong> Dataset Distillation (DD) aims to condense large datasets into compact synthetic sets that preserve performance on unseen data, thereby reducing storage and training costs. However, most existing methods emphasize empirical performance without solid theoretical grounding, leaving issues such as optimization inefficiency and the lack of theoretical guarantees against suboptimal solutions unresolved. To bridge this gap, we propose the <u><strong>BA</strong></u>yesian optimal <u><strong>CON</strong></u>densation framework (<u><strong>BACON</strong></u>), the first to incorporate a Bayesian perspective into dataset distillation. BACON offers a principled probabilistic formulation by casting DD as a Bayesian optimization problem, addressing the lack of Bayesian theoretical analysis in prior methods. To characterize the theoretical limit of DD, we derive a numerically tractable lower bound on the expected risk over the joint distribution of latent variables. Under mild assumptions, we obtain an approximate solution for data synthesis, where incorporating prior knowledge improves optimization efficiency through guiding posterior estimation. We evaluate BACON against 18 state-of-the-art methods on four standard image classification datasets under various images-per-class (IPC) settings, where it consistently demonstrates superior performance. For example, under the IPC-10 setting on CIFAR-10, BACON achieves the largest accuracy gain of 17.16% among all methods, outperforming the second-best approach, IDM, by 3.46%, while also reducing both synthesis and training costs. These results underscore the theoretical soundness and practical effectiveness of BACON for dataset distillation. Code and distilled datasets are available at <a href="https://github.com/zhouzhengqd/BACON" target="_blank">
+						<u><strong>https://github.com/zhouzhengqd/BACON</strong></u></a>.
+						
 				</p>
 				
 				
@@ -310,23 +311,34 @@
 	<br>
 	
 	<hr>
-	
-	<center><h1>Background, Motivation, and Contribution</h1></center> <p> <strong>Dataset Distillation (DD)</strong> aims to reduce dataset size while maintaining model performance. Despite significant progress in dataset distillation, most existing methods prioritize empirical performance over theoretical grounding, leading to inefficient optimization and a lack of theoretical guarantees against suboptimal solutions. Fundamentally, DD can be framed as an \textbf{optimization problem over probability distributions}, yet existing approaches lack a principled probabilistic formulation as shown in <strong>Figure 1(a)</strong>. To explore Bayesian principles for dataset distillation, leading to the following key research questions: 
-	
-	</p> <ul> <li><i>How can dataset distillation be framed within a probabilistic framework?
 
-	</i></li> <li><i>What is the theoretical lower bound for optimal condensation?
-		
-	</i></li> <li><i>How can Bayesian methods enable efficient and practical data synthesis? </ul> <p></p> 
-	
-	To address the aforementioned challenges, we propose the <strong>Bayesian Optimal Condensation Framework (BACON)</strong>, the first to apply a Bayesian perspective to dataset distillation. BACON formulates dataset distillation (also referred to as condensation) as a Bayesian optimization problem that minimizes expected risk. A theoretical lower bound is derived over the joint distribution of latent variables, revealing the fundamental limits of optimal condensation. For practical implementation, the risk is approximated under specific assumptions, enabling efficient data synthesis through likelihood estimation and prior knowledge from the original dataset. The BACON method is illustrated in <strong>Figure 1(b)</strong>, along with results on accuracy and training time. BACON is evaluated against 18 state-of-the-art methods on four standard image classification datasets: SVHN, CIFAR-10, CIFAR-100, and TinyImageNet, under varying IPC settings. It consistently outperforms all compared methods, including gradient-based approaches (e.g., DC, DSA, DCC), distribution-based approaches (e.g., IDM, DataDAM, IID), and recent methods such as G-VBSM and Teddy. For example, under the IPC-10 setting on CIFAR-10, BACON achieves the highest accuracy improvement of 17.16%, surpassing the second-best approach, IDM, by 3.46%, while also reducing both synthesis and training costs. These results highlight the theoretical rigor and practical advantages of BACON in dataset distillation.
-	Key Benefits of BACON:
-	<ul>
-		<li><i><strong>First Bayesian DD Framework:</strong> We are the first to introduce a Bayesian framework for dataset distillation, formulating it as a Bayesian optimization problem that minimizes the expected risk. We derive a theoretical lower bound on the expected risk over the joint distribution of latent variables, providing new insights into the fundamental limits of optimal condensation.</i></li>
-		<li><i><strong>Efficient Distillation Algorithm:</strong> We propose the BACON framework (Bayesian optimal CONdensation), an efficient method that minimizes the expected risk for dataset distillation. By incorporating key assumptions such as a Gaussian prior and a total variance constraint, BACON derives loss terms to effectively guide the distillation process.</i></li>
-		<li><i><strong>Superior Empirical Performance:</strong> Extensive experiments comparing BACON with various dataset distillation methods across multiple image classification datasets demonstrate that BACON consistently outperforms all methods, showcasing superior performance in both accuracy and efficiency.</i></li>
-	  </ul>
-	<hr>
+<center><h1>Background, Motivation, and Contribution</h1></center>
+
+<p><strong>Dataset Distillation (DD)</strong> seeks to compress large datasets into compact synthetic subsets without sacrificing model performance. While recent methods have made notable empirical strides, most lack a solid theoretical foundation, often resulting in inefficient optimization and vulnerability to suboptimal solutions. Fundamentally, DD can be viewed as an <strong>optimization problem over probability distributions</strong>; however, existing techniques rarely adopt a principled probabilistic approach, as illustrated in <strong>Figure 1(a)</strong>. This raises three central research questions:</p>
+
+<ul>
+  <li><i>How can dataset distillation be framed within a probabilistic framework?</i></li>
+  <li><i>What is the theoretical lower bound for optimal condensation?</i></li>
+  <li><i>How can Bayesian methods enable efficient and practical data synthesis?</i></li>
+</ul>
+
+<p>
+To address these challenges, we propose the <strong>Bayesian Optimal Condensation Framework (BACON)</strong> —the first framework to adopt a Bayesian perspective for dataset distillation. BACON formulates condensation as a Bayesian optimization problem that minimizes expected risk. A theoretical lower bound on this risk is derived over the joint distribution of latent variables, revealing fundamental constraints of optimal condensation. For practical deployment, the risk function is approximated under specific assumptions, enabling efficient data synthesis using likelihood estimation and prior knowledge from the original dataset.
+</p>
+
+<p>
+As shown in <strong>Figure 1(b)</strong>, BACON not only offers theoretical rigor but also demonstrates strong empirical performance. We benchmark BACON against 18 state-of-the-art methods on four standard image classification datasets (SVHN, CIFAR-10, CIFAR-100, TinyImageNet) under various IPC settings. BACON consistently outperforms gradient-based methods (e.g., DC, DSA, DCC), distribution-based methods (e.g., IDM, DataDAM, IID), and recent advanced methods such as G-VBSM and Teddy. Notably, under the IPC-10 setting on CIFAR-10, BACON achieves a 17.16% accuracy improvement, surpassing the next-best method IDM by 3.46%, while also reducing synthesis and training costs. These results underscore BACON's theoretical soundness and practical superiority in dataset distillation.
+</p>
+
+<p><strong>Key Benefits of BACON:</strong></p>
+<ul>
+  <li><i><strong>First Bayesian DD Framework:</strong> BACON is the first to model dataset distillation as a Bayesian optimization task, minimizing expected risk. It establishes a theoretical lower bound over latent variables, offering a new perspective on the limits of condensation.</i></li>
+  <li><i><strong>Efficient Distillation Algorithm:</strong> BACON incorporates assumptions such as Gaussian priors and total variance constraints to derive tractable loss terms, enabling efficient and principled data synthesis.</i></li>
+  <li><i><strong>Superior Empirical Performance:</strong> Extensive evaluations across multiple benchmarks confirm that BACON consistently achieves state-of-the-art performance in both accuracy and efficiency.</i></li>
+</ul>
+
+<hr>
+
 	<center><h1>Bayesian Optimal Condensation Framework</h1></center> <tr> <td width="260px"> <center> <figure> <img class="round" style="width:800px" src="./resources/method.png"/> <figcaption style="font-size: 16px; text-align: left; color: #555;"> <strong>Figure 2:</strong> Overview of BACON: BACON formulates DD as Bayesian risk minimization over embeddings (*), and derives a tractable lower bound for optimization (I), guided by prior and likelihood from the original data (II). Monte Carlo sampling accelerates optimization (III), and a loss is constructed under two assumptions (IV) to update synthetic data via gradient descent (V). </figcaption> </figure> </center> </td> </tr> <p>As shown in <strong>Figure 2</strong>, BACON uses a Bayesian-based joint probability model to optimize dataset distillation. It derives a condensation risk function to compute the optimal synthetic dataset and applies approximation methods for efficient solution. The Bayesian optimal condensation risk function is defined in <a href="#theorem3.4">Theorem 3.4</a>, and the risk function’s theoretical lower bound is established in <a href="#theorem3.6">Theorem 3.6</a>. Assumptions on <a href="#assumption1">log-likelihood</a> and <a href="#assumption2">prior distribution</a> are introduced to approximate solutions and define the training strategy. BACON represents the first theoretical analysis of optimal condensation via Bayesian principles, providing a strong foundation for improved distillation performance.</p>
 		
 	  <head>
